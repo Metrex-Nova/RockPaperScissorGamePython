@@ -1,38 +1,39 @@
 Rock-Paper-Scissors Game
+========================
+
 Overview
+--------
+This project implements a simple command-line version of the Rock-Paper-Scissors game using Python. 
+The user plays against the computer, which randomly selects its move. 
+The game continues until either the user or the computer wins three rounds.
 
-This repository contains a simple command-line implementation of the classic Rock-Paper-Scissors game in Python. The user competes against the computer, which selects its moves randomly. The game continues until either the user or the computer achieves three victories.
-
-The project is designed to demonstrate basic control flow, conditionals, and input handling in Python.
+This program demonstrates the use of loops, conditional logic, user input, and random number generation in Python.
 
 Features
+--------
+- Interactive user input and computer-generated responses
+- Score tracking for both user and computer
+- Automatic termination when either side reaches three wins
+- Clear textual feedback for every round
 
-Interactive gameplay between user and computer.
+Rules
+-----
+The rules of Rock-Paper-Scissors are as follows:
 
-Randomized computer moves using Python's random module.
+User Choice | Computer Choice | Winner   | Explanation
+-------------|----------------|-----------|-----------------------------
+Rock         | Scissor        | User      | Rock beats Scissor
+Paper        | Rock           | User      | Paper wraps Rock
+Scissor      | Paper          | User      | Scissor cuts Paper
+Rock         | Paper          | Computer  | Paper wraps Rock
+Paper        | Scissor        | Computer  | Scissor cuts Paper
+Scissor      | Rock           | Computer  | Rock beats Scissor
+Same Choice  | Same Choice    | Tie       | Both selected same option
 
-Score tracking for both user and computer.
+The first to reach three points wins the game.
 
-Automatic game termination once a player reaches three wins.
-
-Clear round-by-round feedback.
-
-Game Rules
-
-The rules are consistent with the traditional Rock-Paper-Scissors game:
-
-User Choice	Computer Choice	Winner	Explanation
-Rock	Scissor	User	Rock beats Scissor
-Paper	Rock	User	Paper wraps Rock
-Scissor	Paper	User	Scissor cuts Paper
-Rock	Paper	Computer	Paper wraps Rock
-Paper	Scissor	Computer	Scissor cuts Paper
-Scissor	Rock	Computer	Rock beats Scissor
-Same Choice	Same Choice	Tie	Both players selected same
-
-The first player to reach three points wins the match.
-
-Code Implementation
+Source Code
+-----------
 import random
 
 items = ["Rock", "Paper", "Scissor"]
@@ -77,22 +78,17 @@ while comp_var <= 3 or user_var <= 3:
 
 print("Game is complete. Thank you for playing!")
 
-Execution Instructions
+How to Run
+----------
+1. Ensure Python 3.6 or higher is installed on your computer.
+2. Save the code in a file named 'rock_paper_scissor.py'.
+3. Open a terminal or command prompt in the file’s directory.
+4. Run the following command:
+   python rock_paper_scissor.py
+5. Follow the on-screen instructions to play the game.
 
-Ensure that Python 3.6 or higher is installed on your system.
-
-Save the program in a file named rock_paper_scissor.py.
-
-Open a terminal or command prompt in the same directory as the file.
-
-Execute the following command:
-
-python rock_paper_scissor.py
-
-
-Follow the on-screen instructions to play.
-
-Example Output
+Sample Output
+-------------
 Enter your move = Rock, Paper or Scissor: rock
 User choice = rock, Computer choice = Scissor
 Rock beats scissor. Thus, user wins
@@ -101,33 +97,24 @@ Total score — Computer: 0, User: 1
 User wins the game!
 Game is complete. Thank you for playing!
 
-Possible Extensions
+Future Enhancements
+-------------------
+- Input validation for invalid entries
+- Configurable winning score limit
+- Graphical User Interface (GUI) using Tkinter or Pygame
+- Score persistence between sessions
+- Extended game versions such as Rock-Paper-Scissors-Lizard-Spock
 
-Add input validation for incorrect spellings or invalid entries.
-
-Allow users to set a custom winning score.
-
-Introduce a graphical user interface (GUI) using Tkinter or Pygame.
-
-Maintain a persistent score history across multiple sessions.
-
-Extend the game with additional choices such as Lizard and Spock.
-
-Dependencies
-
-Python Standard Library (random module only).
-
-No external packages are required.
+Requirements
+------------
+- Python 3.6 or later
+- No external dependencies (uses Python standard library only)
 
 License
+-------
+This project is licensed under the MIT License.
+You may freely use, modify, and distribute this program for educational or research purposes.
 
-This project is released under the MIT License.
-You are free to use, modify, and distribute this code for educational or research purposes.
-
-Citation
-
-If you use or modify this project in academic work or teaching materials, please cite it as:
-
-Rock-Paper-Scissors Python Implementation.
-Version 1.0, 2025.
-Available on GitHub.
+Author
+------
+Developed as an introductory Python project demonstrating basic programming constructs and logical control flow.
